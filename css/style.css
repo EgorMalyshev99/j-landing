@@ -608,7 +608,7 @@ input[type="radio"].visually-hidden {
   width: 100%;
   max-height: 250px;
   overflow-y: auto;
-  border: 1px solid #000;
+  border: 3px solid var(--gray);
   border-radius: 3px;
   display: none;
 }
@@ -623,11 +623,9 @@ input[type="radio"].visually-hidden {
 
 .dropdown__list-item {
   height: 35px;
-  padding: 0 15px;
-  font-size: 12px;
-  line-height: 14px;
-  color: #000;
-  background-color: #fff;
+  padding: 0 30px;
+  color: var(--dark-gray);
+  background-color: var(--white);
   transition: all .25s ease;
   cursor: pointer;
   display: flex;
@@ -636,7 +634,7 @@ input[type="radio"].visually-hidden {
 }
 
 .dropdown__list-item+.dropdown__list-item {
-  border-top: 1px solid #000;
+  border-top: 2px solid var(--gray);
 }
 
 .dropdown__list-item:hover {
@@ -654,20 +652,37 @@ input[type="radio"].visually-hidden {
 }
 
 .complictation+.complictation {
-  margin-top: 30px;
+  padding-top: 30px;
+  margin-top: 10px;
+  border-top: 3px solid var(--basic-red);
 }
 
 .complictation__img {
-  width: 25%;
+  width: 30%;
 }
 
-.complictation__description {}
+.complictation__description {
+  margin-left: 15px;
+}
+
+.complictation__char {
+  font-weight: 700;
+}
+
+.complictaton__benefits {
+  margin-left: 15px;
+}
 
 .complictation__buttons {
+  margin-left: 15px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.complictation__buttons .btn+.btn {
+  margin-top: 10px;
 }
 
 /* / Complictations */

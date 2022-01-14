@@ -1,0 +1,116 @@
+{
+  "J7": {
+    "model": "J7",
+    "complictations": [{
+      "name": "Basic",
+      "engine": "1.5T MT",
+      "kpp": "\u041c\u041a\u041f\u041f 6",
+      "power": "136",
+      "old_cost": 1229000,
+      "new_cost": 773900
+    }, {
+      "name": "Comfort",
+      "engine": "1.5T MT",
+      "kpp": "\u041c\u041a\u041f\u041f 6",
+      "power": "136",
+      "old_cost": 1249000,
+      "new_cost": 863900
+    }, {
+      "name": "Luxury",
+      "engine": "1.5T CVT",
+      "kpp": "\u0412\u0430\u0440\u0438\u0430\u0442\u043e\u0440",
+      "power": "136",
+      "old_cost": 1389000,
+      "new_cost": 953900
+    }]
+  },
+  "S7": {
+    "model": "S7",
+    "complictations": [{
+      "name": "Basic 5 \u043c\u0435\u0441\u0442",
+      "engine": "1.5T DCT",
+      "kpp": "\u0420\u041a\u041f\u041f 6",
+      "power": "150",
+      "old_cost": 1659000,
+      "new_cost": 1179910
+    }, {
+      "name": "Comfort 5 \u043c\u0435\u0441\u0442",
+      "engine": "1.5T DCT",
+      "kpp": "\u0420\u041a\u041f\u041f 6",
+      "power": "150",
+      "old_cost": 1889000,
+      "new_cost": 1296100
+    }, {
+      "name": "Comfort 7 \u043c\u0435\u0441\u0442",
+      "engine": "1.5T DCT",
+      "kpp": "\u0420\u041a\u041f\u041f 6",
+      "power": "150",
+      "old_cost": 1729000,
+      "new_cost": 1359100
+    }, {
+      "name": "Luxury 5 \u043c\u0435\u0441\u0442",
+      "engine": "1.5T DCT",
+      "kpp": "\u0420\u041a\u041f\u041f 6",
+      "power": "150",
+      "old_cost": 1799000,
+      "new_cost": 1395100
+    }, {
+      "name": "Luxury 7 \u043c\u0435\u0441\u0442",
+      "engine": "1.5T DCT",
+      "kpp": "\u0420\u041a\u041f\u041f 6",
+      "power": "150",
+      "old_cost": 1949000,
+      "new_cost": 1449100
+    }]
+  },
+  "S5": {
+    "model": "S5",
+    "complictations": [{
+      "name": "Comfort",
+      "engine": "2.0 MT",
+      "kpp": "\u041c\u041a\u041f\u041f 5",
+      "power": "136",
+      "old_cost": 1184000,
+      "new_cost": 1109100
+    }, {
+      "name": "Luxury",
+      "engine": "2.0 MT",
+      "kpp": "\u041c\u041a\u041f\u041f 5",
+      "power": "136",
+      "old_cost": 1294000,
+      "new_cost": 1224100
+    }, {
+      "name": "Intelligent",
+      "engine": "2.0 MT",
+      "kpp": "\u041c\u041a\u041f\u041f 6",
+      "power": "150",
+      "old_cost": 1409000,
+      "new_cost": 1324100
+    }]
+  },
+  "S3": {
+    "model": "S3",
+    "complictations": [{
+      "name": "Comfort",
+      "engine": "1.6 MT",
+      "kpp": "\u041c\u041a\u041f\u041f 6",
+      "power": "109",
+      "old_cost": 1049000,
+      "new_cost": 596600
+    }, {
+      "name": "Luxury",
+      "engine": "1.6 MT",
+      "kpp": "\u041c\u041a\u041f\u041f 6",
+      "power": "109",
+      "old_cost": 1119000,
+      "new_cost": 641600
+    }, {
+      "name": "Intelligent",
+      "engine": "1.6 CVT",
+      "kpp": "\u0412\u0430\u0440\u0438\u0430\u0442\u043e\u0440",
+      "power": "109",
+      "old_cost": 1239000,
+      "new_cost": 740600
+    }]
+  }
+}

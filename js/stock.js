@@ -1,6 +1,6 @@
 let stock = [];
 
-fetch('/complectations.json')
+fetch('./complectations.json')
   .then(response => response.json())
   .then(data => stock = Object.values(data))
   .then(() => console.log(stock));
@@ -54,31 +54,24 @@ window.onload = function () {
       <img src="${imgPath}.webp" alt="${car}">
     </div>
     <div class="complictation__description">
-      <div class="complictation__stat">
-        <div class="complictation__top">
-          <span class="complictation__car">Mazda&nbsp;${car}</span>
-          <div class="complictation__costs">
-            <span class="complictation__old-cost">${complictation.old_cost.toLocaleString()}&nbsp;₽</span>
-            <span class="complictation__new-cost">${complictation.new_cost.toLocaleString()}&nbsp;₽</span>
-          </div>
-        </div>
-        <div class="complictation__middle">
-          <span class="complictation__stock">В наличии: ${getRandomInteger(1, 10)} авто</span>
-          <span class="complictation__credit">в кредит от ${creditPay} ₽/мес.</span>
-        </div>
-        <div class="complictation__char">
-          <span class="complictation__name">${complictation.name}</span>
-          <span class="complictation__kpp">${complictation.kpp}</span>
-          <span class="complictation__engine">${complictation.engine}</span>
-          <span class="complictation__power">${complictation.power}&nbsp;л.с.</span>
-          <span class="complictation__fuel">${complictation.fuel}</span>
-          <span class="complictation__privod">${complictation.privod}&nbsp;привод</span>
-        </div>
+      <div class="complictation__costs">
+        <span class="complictation__old-cost">${complictation.old_cost.toLocaleString()}&nbsp;₽</span>
+        <span class="complictation__new-cost">${complictation.new_cost.toLocaleString()}&nbsp;₽</span>
       </div>
-      <div class="complictation__buttons">
-        <button class="complictation__btn showCredit" type="button">Купить в кредит</button>
-        <button class="complictation__btn complictation__btn--gray showOffer" type="button">Получить предложение</button>
+      <div class="complictation__char">
+        <span class="complictation__name">${complictation.name}</span>
+        <span class="complictation__kpp">${complictation.kpp}</span>
+        <span class="complictation__engine">${complictation.engine}</span>
+        <span class="complictation__power">${complictation.power}&nbsp;л.с.</span>
+      </div>
     </div>
+    <ul class="complictaton__benefits">
+      <li class="complictaton__benefits-item">— Кредит от 7.4% годовых.</li>
+      <li class="complictaton__benefits-item">— Особые условия при покупке в Trade in.</li>
+    </ul>
+    <div class="complictation__buttons">
+      <button class="btn btn--transparent" type="button" data-bs-toggle="modal" data-bs-target="#creditModal">Купить в кредит</button>
+      <button class="btn complictation__btn--gray" type="button" data-bs-toggle="modal" data-bs-target="#offerModal">Получить предложение</button>
     </div>
   </div>`
   };
@@ -94,7 +87,7 @@ window.onload = function () {
   dropBtns.forEach((btn) => {
     btn.addEventListener('click', (evt) => {
       dropContent.forEach((item) => item.classList.remove('active'));
-      evt.target.nextSibling.classList.add('active');
+      evt.target.nextElementSibling.classList.add('active');
     });
   });
 
@@ -173,21 +166,7 @@ window.onload = function () {
               engineBtn.textContent = compl.engine;
             }
           });
-
-          $('.showOffer').modaal({
-            content_source: '#offer-modal'
-          });
-          $('.showCredit').modaal({
-            content_source: '#credit-modal'
-          });
         });
-      });
-
-      $('.showOffer').modaal({
-        content_source: '#offer-modal'
-      });
-      $('.showCredit').modaal({
-        content_source: '#credit-modal'
       });
     });
   });
