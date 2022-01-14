@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="./css/bootstrap.min.css">
   <link rel="stylesheet" href="./css/normalize.css">
   <link rel="stylesheet" href="./css/style.css">
@@ -72,7 +73,7 @@
                 <button class="btn" type="button" data-bs-toggle="modal" data-bs-target="#offerModal">Получить предложение</button>
               </div>
             </div>
-            <div class="car__right" style="background-image: url(/img/j7-card.jpg);"></div>
+            <div class="car__right" style="background-image: url(./img/j7-card.jpg);"></div>
           </div>
           <div class="car">
             <div class="car__left">
@@ -91,7 +92,7 @@
                 <button class="btn" type="button" data-bs-toggle="modal" data-bs-target="#offerModal">Получить предложение</button>
               </div>
             </div>
-            <div class="car__right" style="background-image: url(/img/s7-card.jpg);"></div>
+            <div class="car__right" style="background-image: url(./img/s7-card.jpg);"></div>
           </div>
           <div class="car">
             <div class="car__left">
@@ -110,7 +111,7 @@
                 <button class="btn" type="button" data-bs-toggle="modal" data-bs-target="#offerModal">Получить предложение</button>
               </div>
             </div>
-            <div class="car__right" style="background-image: url(/img/s3-card.jpg);"></div>
+            <div class="car__right" style="background-image: url(./img/s3-card.jpg);"></div>
           </div>
           <div class="car">
             <div class="car__left">
@@ -129,7 +130,7 @@
                 <button class="btn" type="button" data-bs-toggle="modal" data-bs-target="#offerModal">Получить предложение</button>
               </div>
             </div>
-            <div class="car__right" style="background-image: url(/img/s5-card.jpg);"></div>
+            <div class="car__right" style="background-image: url(./img/s5-card.jpg);"></div>
           </div>
         </div>
       </div>
@@ -175,7 +176,22 @@
   </main>
 
   <footer class="main-footer">
-    <section class="map"></section>
+    <section class="map">
+      <div class="container position-relative">
+        <div class="form-block d-none d-md-flex">
+          <span class="logo d-block mb-4"></span>
+          <form action="" method="post" class="standart-form">
+            <input class="standart-input" type="text" name="name" placeholder="Ваше имя">
+            <input class="standart-input" type="tel" name="phone" placeholder="Ваш телефон">
+            <button class="btn" type="submit">Получить предложение</button>
+            <div class="agreement">
+              <label class="agreement__label">Согласие на&nbsp;обработку <a class="personal-data-ckeck__link">персональных данных</a>
+                <input class="visually-hidden" type="checkbox" required="" checked=""><span class="checkmark"></span></label>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
 
     <section class="disclaimer py-4">
       <div class="container">
