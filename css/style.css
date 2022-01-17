@@ -639,6 +639,10 @@ input[type="radio"].visually-hidden {
 
 /* Complictations */
 
+.complictations {
+  position: relative;
+}
+
 .complictation {
   display: flex;
   align-items: center;
@@ -901,7 +905,8 @@ input[type="radio"].visually-hidden {
     margin-top: 15px;
   }
 
-  .cars::after {
+  .cars::after,
+  .complictations::after {
     content: "";
     position: absolute;
     left: 50%;
@@ -963,6 +968,10 @@ input[type="radio"].visually-hidden {
   .complictation__buttons {
     margin-top: 20px;
     order: 3;
+  }
+
+  .form-block {
+    width: 100%;
   }
 
   .disclaimer .accordion-header {
