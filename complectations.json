@@ -1,6 +1,6 @@
 {
   "J7": {
-    "model": "J7",
+    "model": "j7",
     "complictations": [{
       "name": "Basic",
       "engine": "1.5T MT",
@@ -25,7 +25,7 @@
     }]
   },
   "S7": {
-    "model": "S7",
+    "model": "s7",
     "complictations": [{
       "name": "Basic 5 \u043c\u0435\u0441\u0442",
       "engine": "1.5T DCT",
@@ -64,7 +64,7 @@
     }]
   },
   "S5": {
-    "model": "S5",
+    "model": "s5",
     "complictations": [{
       "name": "Comfort",
       "engine": "2.0 MT",
@@ -89,7 +89,7 @@
     }]
   },
   "S3": {
-    "model": "S3",
+    "model": "s3",
     "complictations": [{
       "name": "Comfort",
       "engine": "1.6 MT",

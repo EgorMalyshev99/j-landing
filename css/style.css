@@ -619,6 +619,7 @@ input[type="radio"].visually-hidden {
   height: 35px;
   padding: 0 30px;
   color: var(--dark-gray);
+  text-transform: uppercase;
   background-color: var(--white);
   transition: all .25s ease;
   cursor: pointer;
