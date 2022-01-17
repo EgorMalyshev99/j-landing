@@ -671,6 +671,7 @@ input[type="radio"].visually-hidden {
 }
 
 .complictation__costs {
+  margin-bottom: 25px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -963,6 +964,10 @@ input[type="radio"].visually-hidden {
     padding-left: 0;
     padding-right: 0;
     order: 1;
+  }
+
+  .complictation__costs {
+    margin-bottom: 0;
   }
 
   .complictation__buttons {
