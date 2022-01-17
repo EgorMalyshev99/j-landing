@@ -1,12 +1,14 @@
 let stock = [];
 
-fetch('./complectations.json')
-  .then(response => response.json())
-  .then(data => stock = Object.values(data))
-  .then(() => console.log(stock));
+document.addEventListener("DOMContentLoaded", () => {
+  fetch('./complectations.json')
+    .then(response => response.json())
+    .then(data => stock = Object.values(data))
+    .then(() => console.log(stock))
+    .then(() => addComplictations());
+});
 
-window.onload = function () {
-
+function addComplictations() {
   // Логика для показа комплектаций
   const RenderPoints = {
     AFTERBEGIN: 'afterbegin',
@@ -54,21 +56,25 @@ window.onload = function () {
       <img src="${imgPath}.webp" alt="${car}">
     </div>
     <div class="complictation__description">
+      <div class="mb-0 mb-md-4">
+        <span class="complictation__engine">${complictation.engine}</span>&nbsp;
+        <span class="complictation__name">${complictation.name}</span>
+      </div>
+      <div class="ms-3 ms-md-0">
+        <span class="complictation__kpp">${complictation.kpp}</span>&nbsp;
+        <span class="complictation__power">${complictation.power}&nbsp;л.с.</span>
+      </div>
+    </div>
+    <div class="complictaton__benefits">
       <div class="complictation__costs">
         <span class="complictation__old-cost">${complictation.old_cost.toLocaleString()}&nbsp;₽</span>
         <span class="complictation__new-cost">${complictation.new_cost.toLocaleString()}&nbsp;₽</span>
       </div>
-      <div class="complictation__char">
-        <span class="complictation__name">${complictation.name}</span>
-        <span class="complictation__kpp">${complictation.kpp}</span>
-        <span class="complictation__engine">${complictation.engine}</span>
-        <span class="complictation__power">${complictation.power}&nbsp;л.с.</span>
-      </div>
+      <ul class="d-none d-md-block">
+        <li class="complictaton__benefits-item">— Кредит от&nbsp;7.4% годовых.</li>
+        <li class="complictaton__benefits-item">— Особые условия при&nbsp;покупке в&nbsp;Trade&nbsp;in.</li>
+      </ul>
     </div>
-    <ul class="complictaton__benefits">
-      <li class="complictaton__benefits-item">— Кредит от 7.4% годовых.</li>
-      <li class="complictaton__benefits-item">— Особые условия при покупке в Trade in.</li>
-    </ul>
     <div class="complictation__buttons">
       <button class="btn btn--transparent" type="button" data-bs-toggle="modal" data-bs-target="#creditModal">Купить в кредит</button>
       <button class="btn complictation__btn--gray" type="button" data-bs-toggle="modal" data-bs-target="#offerModal">Получить предложение</button>

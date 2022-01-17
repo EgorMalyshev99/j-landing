@@ -351,10 +351,6 @@ input[type="radio"].visually-hidden {
   background-color: var(--white);
 }
 
-.main-header .container {
-  height: 100%;
-}
-
 .shadow-bottom::after {
   content: "";
   position: absolute;
@@ -447,6 +443,10 @@ input[type="radio"].visually-hidden {
   margin-left: 80px;
 }
 
+.cars {
+  position: relative;
+}
+
 .car {
   display: flex;
   justify-content: space-between;
@@ -518,12 +518,6 @@ input[type="radio"].visually-hidden {
 .credit-banner {
   padding: 60px 0 20px 0;
   background-image: url(../img/banners/credit-banner__desktop.jpg);
-}
-
-.credit-banner__inner {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
 }
 
 .credit-banner__heading {
@@ -662,19 +656,41 @@ input[type="radio"].visually-hidden {
 }
 
 .complictation__description {
-  margin-left: 15px;
-}
-
-.complictation__char {
+  width: 20%;
+  padding-left: 10px;
   font-weight: 700;
 }
 
 .complictaton__benefits {
-  margin-left: 15px;
+  padding-left: 20px;
+  padding-right: 10px;
+}
+
+.complictation__costs {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.complictation__old-cost {
+  margin-bottom: 3px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  text-decoration: line-through;
+  opacity: 0.5;
+  display: block;
+}
+
+.complictation__new-cost {
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 30px;
+  color: var(--basic-red);
 }
 
 .complictation__buttons {
-  margin-left: 15px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -822,6 +838,41 @@ input[type="radio"].visually-hidden {
     bottom: -15px;
   }
 
+  .scroll-compensate {
+    padding-right: 0;
+  }
+
+  .main-header .btn {
+    width: 180px;
+    padding: 0 5px;
+  }
+
+  .main-heading {
+    font-size: 26px;
+    line-height: 30px;
+  }
+
+  .second-heading {
+    font-size: 30px;
+    line-height: 32px;
+  }
+
+  .main-banner {
+    height: 370px;
+    background-image: url(../img/banners/main-banner__mobile.jpg);
+  }
+
+  .credit-banner {
+    height: 270px;
+    background-image: url(../img/banners/credit-banner__mobile.jpg);
+  }
+
+  .credit-banner__heading {
+    max-width: 290px;
+    font-size: 30px;
+    line-height: 32px;
+  }
+
   .map {
     height: 400px;
     background-size: 500%;
@@ -840,20 +891,100 @@ input[type="radio"].visually-hidden {
     top: 5px;
     right: 5px;
   }
+
+  .benefit {
+    max-width: 100%;
+  }
+
+  .benefit+.benefit {
+    margin-left: 0;
+    margin-top: 15px;
+  }
+
+  .cars::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 93%;
+    height: 3px;
+    background-color: var(--basic-red);
+  }
+
+  .car {
+    flex-direction: column-reverse;
+  }
+
+  .car__left {
+    width: 100%;
+    padding: 30px 25px;
+  }
+
+  .car__right {
+    width: 100%;
+    height: 220px;
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+
+  .complictation {
+    flex-direction: column;
+  }
+
+  .complictation+.complictation {
+    padding-top: 22px;
+    margin-top: 30px;
+  }
+
+  .complictation__img {
+    width: 95%;
+    order: 0;
+  }
+
+  .complictation__description {
+    padding-left: 0;
+    max-width: 100%;
+    width: 280px;
+    order: 2;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .complictaton__benefits {
+    max-width: 100%;
+    width: 280px;
+    margin-bottom: 20px;
+    padding-left: 0;
+    padding-right: 0;
+    order: 1;
+  }
+
+  .complictation__buttons {
+    margin-top: 20px;
+    order: 3;
+  }
+
+  .disclaimer .accordion-header {
+    width: 100%;
+    margin: 0 auto 20px auto;
+  }
 }
 
 @media screen and (max-width: 576px) {
   .dropdown {
     width: 100%;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
   }
 
   .dropdown__item {
-    width: 49%;
+    width: 80%;
   }
 
   .dropdown__item+.dropdown__item {
     margin-left: 0;
+    margin-top: 12px;
   }
 
   .dropdown__btn {

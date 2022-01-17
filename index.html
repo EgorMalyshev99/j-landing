@@ -14,13 +14,14 @@
 
 <body class="page-body">
   <header class="main-header shadow-bottom">
-    <div class="container">
-      <div class="main-header__inner">
-        <div class="d-flex align-items-center">
-          <span class="logo me-3"></span>
-          <a class="phone" href="tel:+74951537558">+7 (495) 153-75-58</a>
-        </div>
-        <button class="btn" type="button" data-bs-toggle="modal" data-bs-target="#callbackModal">Обратный звонок<span class="icon phone-icon ms-2"></span></button>
+    <div class="main-header__inner container">
+      <div class="d-flex align-items-center">
+        <span class="logo me-3"></span>
+        <a class="phone d-none d-md-block" href="tel:+74951537558">+7 (495) 153-75-58</a>
+      </div>
+      <div>
+        <button class="btn mb-1 mb-md-0" type="button" data-bs-toggle="modal" data-bs-target="#callbackModal">Обратный звонок<span class="icon phone-icon ms-2 d-none d-md-none"></span></button>
+        <a class="phone d-block d-md-none" href="tel:+74951537558">+7 (495) 153-75-58</a>
       </div>
     </div>
   </header>
@@ -28,14 +29,15 @@
   <main class="main-content">
     <section class="main-banner">
       <div class="container">
-        <h1 class="main-heading">Ликвидация склада автомобилей<br>по ценам 2017 года</h1>
+        <h1 class="main-heading">Ликвидация склада автомобилей<br>по ценам 2017 года
+        </h1>
         <button class="btn mx-auto" type="button" data-bs-toggle="modal" data-bs-target="#offerModal">Узнать подробнее</button>
       </div>
     </section>
 
     <section class="benefits">
       <div class="container">
-        <div class="w-100 d-flex justify-content-center">
+        <div class="w-100 d-flex flex-column flex-md-row justify-content-center align-items-center">
           <a class="benefit d-flex flex-column align-items-center" href="#" data-bs-toggle="modal" data-bs-target="#offerModal">
             <img class="benefit__img" src="./img/benefits-1.png" alt="Гарантия лучшей цены">
             <span class="fw-bold text-center text-black">Гарантия лучшей цены</span>
@@ -52,7 +54,7 @@
       </div>
     </section>
 
-    <section class="cars pb-5">
+    <section class="cars pb-5 mb-4 mb-md-0">
       <div class="container">
         <h2 class="second-heading">Модельный ряд</h2>
         <div class="cars-list">
@@ -136,9 +138,24 @@
       </div>
     </section>
 
+    <div class="container d-block d-md-none mb-4">
+      <div class="d-flex flex-column align-items-center">
+        <h3 class="credit-banner__heading">Новый автомобиль в&nbsp;кредит от&nbsp;<span style="color: #CC000D;">5&nbsp;900&nbsp;₽/мес</span>.</h3>
+        <form action="" method="post" class="standart-form">
+          <input class="standart-input" type="text" name="name" placeholder="Ваше имя">
+          <input class="standart-input" type="tel" name="phone" placeholder="Ваш телефон">
+          <button class="btn" type="submit">Получить предложение</button>
+          <div class="agreement">
+            <label class="agreement__label text-black">Согласие на&nbsp;обработку <a class="personal-data-ckeck__link text-black">персональных данных</a>
+              <input class="visually-hidden" type="checkbox" required="" checked=""><span class="checkmark"></span></label>
+          </div>
+        </form>
+      </div>
+    </div>
+
     <section class="banner credit-banner">
       <div class="container">
-        <div class="credit-banner__inner">
+        <div class="d-none d-md-flex flex-column align-items-start">
           <h3 class="credit-banner__heading">Новый автомобиль в&nbsp;кредит от&nbsp;<span style="color: #CC000D;">5&nbsp;900&nbsp;₽/мес</span>.</h3>
           <form action="" method="post" class="standart-form">
             <input class="standart-input" type="text" name="name" placeholder="Ваше имя">
@@ -153,7 +170,7 @@
       </div>
     </section>
 
-    <section class="complictations py-5 mt-5">
+    <section class="complictations py-3 mt-3 py-md-5 mt-md-5">
       <div class="container">
         <h2 class="second-heading">Автомобили в наличии</h2>
         <div class="dropdown">
@@ -173,49 +190,28 @@
         <div class="complictstions__list">
           <div class="complictation">
             <div class="complictation__img">
-              <img src="/img/cars/J7/4.webp" alt="J7">
+              <img src="/img/cars/S3/3.webp" alt="S3">
             </div>
             <div class="complictation__description">
-              <div class="complictation__costs">
-                <span class="complictation__old-cost">1&nbsp;229&nbsp;000&nbsp;₽</span>
-                <span class="complictation__new-cost">773&nbsp;900&nbsp;₽</span>
+              <div class="mb-0 mb-md-4">
+                <span class="complictation__engine">1.6 MT</span>&nbsp;
+                <span class="complictation__name">Comfort</span>
               </div>
-              <div class="complictation__char">
-                <span class="complictation__name">Basic</span>
-                <span class="complictation__kpp">МКПП 6</span>
-                <span class="complictation__engine">1.5T MT</span>
-                <span class="complictation__power">136&nbsp;л.с.</span>
+              <div class="ms-3 ms-md-0">
+                <span class="complictation__kpp">МКПП 6</span>&nbsp;
+                <span class="complictation__power">109&nbsp;л.с.</span>
               </div>
             </div>
-            <ul class="complictaton__benefits">
-              <li class="complictaton__benefits-item">— Кредит от 7.4% годовых.</li>
-              <li class="complictaton__benefits-item">— Особые условия при покупке в Trade in.</li>
-            </ul>
-            <div class="complictation__buttons">
-              <button class="btn btn--transparent" type="button" data-bs-toggle="modal" data-bs-target="#creditModal">Купить в кредит</button>
-              <button class="btn complictation__btn--gray" type="button" data-bs-toggle="modal" data-bs-target="#offerModal">Получить предложение</button>
-            </div>
-          </div>
-          <div class="complictation">
-            <div class="complictation__img">
-              <img src="/img/cars/S3/1.webp" alt="S3">
-            </div>
-            <div class="complictation__description">
+            <div class="complictaton__benefits">
               <div class="complictation__costs">
                 <span class="complictation__old-cost">1&nbsp;049&nbsp;000&nbsp;₽</span>
                 <span class="complictation__new-cost">596&nbsp;600&nbsp;₽</span>
               </div>
-              <div class="complictation__char">
-                <span class="complictation__name">Comfort</span>
-                <span class="complictation__kpp">МКПП 6</span>
-                <span class="complictation__engine">1.6 MT</span>
-                <span class="complictation__power">109&nbsp;л.с.</span>
-              </div>
+              <ul class="d-none d-md-block">
+                <li class="complictaton__benefits-item">— Кредит от&nbsp;7.4% годовых.</li>
+                <li class="complictaton__benefits-item">— Особые условия при&nbsp;покупке в&nbsp;Trade&nbsp;in.</li>
+              </ul>
             </div>
-            <ul class="complictaton__benefits">
-              <li class="complictaton__benefits-item">— Кредит от 7.4% годовых.</li>
-              <li class="complictaton__benefits-item">— Особые условия при покупке в Trade in.</li>
-            </ul>
             <div class="complictation__buttons">
               <button class="btn btn--transparent" type="button" data-bs-toggle="modal" data-bs-target="#creditModal">Купить в кредит</button>
               <button class="btn complictation__btn--gray" type="button" data-bs-toggle="modal" data-bs-target="#offerModal">Получить предложение</button>
@@ -223,24 +219,57 @@
           </div>
           <div class="complictation">
             <div class="complictation__img">
-              <img src="/img/cars/S5/4.webp" alt="S5">
+              <img src="/img/cars/J7/4.webp" alt="J7">
             </div>
             <div class="complictation__description">
+              <div class="mb-0 mb-md-4">
+                <span class="complictation__engine">1.5T MT</span>&nbsp;
+                <span class="complictation__name">Basic</span>
+              </div>
+              <div class="ms-3 ms-md-0">
+                <span class="complictation__kpp">МКПП 6</span>&nbsp;
+                <span class="complictation__power">136&nbsp;л.с.</span>
+              </div>
+            </div>
+            <div class="complictaton__benefits">
+              <div class="complictation__costs">
+                <span class="complictation__old-cost">1&nbsp;229&nbsp;000&nbsp;₽</span>
+                <span class="complictation__new-cost">773&nbsp;900&nbsp;₽</span>
+              </div>
+              <ul class="d-none d-md-block">
+                <li class="complictaton__benefits-item">— Кредит от&nbsp;7.4% годовых.</li>
+                <li class="complictaton__benefits-item">— Особые условия при&nbsp;покупке в&nbsp;Trade&nbsp;in.</li>
+              </ul>
+            </div>
+            <div class="complictation__buttons">
+              <button class="btn btn--transparent" type="button" data-bs-toggle="modal" data-bs-target="#creditModal">Купить в кредит</button>
+              <button class="btn complictation__btn--gray" type="button" data-bs-toggle="modal" data-bs-target="#offerModal">Получить предложение</button>
+            </div>
+          </div>
+          <div class="complictation">
+            <div class="complictation__img">
+              <img src="/img/cars/S5/1.webp" alt="S5">
+            </div>
+            <div class="complictation__description">
+              <div class="mb-0 mb-md-4">
+                <span class="complictation__engine">2.0 MT</span>&nbsp;
+                <span class="complictation__name">Comfort</span>
+              </div>
+              <div class="ms-3 ms-md-0">
+                <span class="complictation__kpp">МКПП 5</span>&nbsp;
+                <span class="complictation__power">136&nbsp;л.с.</span>
+              </div>
+            </div>
+            <div class="complictaton__benefits">
               <div class="complictation__costs">
                 <span class="complictation__old-cost">1&nbsp;184&nbsp;000&nbsp;₽</span>
                 <span class="complictation__new-cost">1&nbsp;109&nbsp;100&nbsp;₽</span>
               </div>
-              <div class="complictation__char">
-                <span class="complictation__name">Comfort</span>
-                <span class="complictation__kpp">МКПП 5</span>
-                <span class="complictation__engine">2.0 MT</span>
-                <span class="complictation__power">136&nbsp;л.с.</span>
-              </div>
+              <ul class="d-none d-md-block">
+                <li class="complictaton__benefits-item">— Кредит от&nbsp;7.4% годовых.</li>
+                <li class="complictaton__benefits-item">— Особые условия при&nbsp;покупке в&nbsp;Trade&nbsp;in.</li>
+              </ul>
             </div>
-            <ul class="complictaton__benefits">
-              <li class="complictaton__benefits-item">— Кредит от 7.4% годовых.</li>
-              <li class="complictaton__benefits-item">— Особые условия при покупке в Trade in.</li>
-            </ul>
             <div class="complictation__buttons">
               <button class="btn btn--transparent" type="button" data-bs-toggle="modal" data-bs-target="#creditModal">Купить в кредит</button>
               <button class="btn complictation__btn--gray" type="button" data-bs-toggle="modal" data-bs-target="#offerModal">Получить предложение</button>
