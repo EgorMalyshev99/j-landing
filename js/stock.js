@@ -1,14 +1,12 @@
-let stock = [];
-
 document.addEventListener("DOMContentLoaded", () => {
   fetch('./complectations.json')
     .then(response => response.json())
     .then(data => stock = Object.values(data))
-    .then(() => console.log(stock))
-    .then(() => addComplictations());
+    // .then(data => console.log(data))
+    .then(data => addComplictations(data));
 });
 
-function addComplictations() {
+function addComplictations(stock) {
   // Логика для показа комплектаций
   const RenderPoints = {
     AFTERBEGIN: 'afterbegin',
@@ -28,35 +26,18 @@ function addComplictations() {
     container.insertAdjacentHTML(point, content);
   };
 
-  const format = (value) => {
-    var point = "";
-
-    var x = String(value).replace(/(\.|,)\d+/, function (m) {
-      point = m;
-      return "";
-    });
-
-    x = x.split("").reverse().join("")
-      .replace(/(\d{3})/g, "$1 ")
-      .split("").reverse().join("");
-
-    return x + point;
-  }
-
   const createDropItem = (type, data) => `<li class="dropdown__list-item" data-${type}="${data}">${data}</li>`;
 
   const createComplCard = (car, complictation, imgPath) => {
-    let months = 7 * 12;
-    let icredit = (4.5 / 12) / 100;
-    let creditPay = format(Math.floor(((icredit * Math.pow((1 + icredit), months)) / (Math.pow((1 + icredit), months) - 1)) * complictation.new_cost));
-
     return `
   <div class="complictation">
+    <span class="complictation__car d-block d-md-none">JAC&nbsp;${car}</span>
     <div class="complictation__img">
       <img src="${imgPath}.webp" alt="${car}">
     </div>
     <div class="complictation__description">
       <div class="mb-0 mb-md-4">
+        <span class="complictation__car d-none d-md-block">JAC&nbsp;${car}</span>
         <span class="complictation__engine">${complictation.engine}</span>&nbsp;
         <span class="complictation__name">${complictation.name}</span>
       </div>
@@ -135,7 +116,7 @@ function addComplictations() {
 
       stock.forEach((car) => {
         if (evt.target.textContent === car.model) {
-          modelBtn.textContent = car.model;
+          modelBtn.innerHTML = car.model.toUpperCase();
           currentCar = car.model;
           car.complictations.forEach((complictation) => {
             render(complContainer, createComplCard(car.model, complictation, `${defaultImgPath + car.model + '/' + getRandomInteger(1, 4)}`));
